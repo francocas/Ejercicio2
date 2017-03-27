@@ -1,5 +1,86 @@
 <?php
-    //Ejercicio 6
+echo("Ejercicio 1<br>");
+$acumulador = 0;
+$contador = 0;
+while($acumulador <= 1000)
+{
+	$acumulador+= $contador;
+	echo($contador.", ");
+	
+	$contador++;
+}
+echo("<br>");
+echo($acumulador."<br><br>");
+
+echo("<br>Ejercicio 2<br><br>");
+$fecha = date("d, F, o");
+$mes = date("F");
+$dia = date("d");
+$estacion;
+switch($mes)
+{
+	case "March":
+		if($dia < "21")
+		{
+			$estacion = "Verano";
+		}
+		elseif($dia>= "21")
+		{
+			$estacion = "Otono";
+		}
+		break;
+	case "June":
+		if($dia < "21")
+		{
+			$estacion = "Otono";
+		}
+		elseif($dia >= "21")
+		{
+			$estacion = "Invierno";
+		}
+		break;
+	case "September":
+		if($dia < "21")
+		{
+			$estacion = "Invierno";
+		}
+		elseif($dia >= "21")
+		{
+			$estacion = "Primavera";
+		}
+		break;
+	case "December":
+		if($dia < 21)
+		{
+			$estacion = "Primavera";
+		}
+		elseif($dia > 21)
+		{
+			$estacion = "Verano";
+		}
+		break;
+}
+echo($fecha.", ".$estacion);
+echo("<br><br>Ejercicio 3<br>");
+$a = rand(1,10);
+$b = rand(1,10);
+$c = rand(1,10);
+$NumeroMedio;
+if($a >= $b && $a <= $c || $a <= $b && $a >= $c)
+{
+	$NumeroMedio = $a;
+}
+elseif($b >= $a && $b <= $c || $b <= $a && $b >= $c)
+{
+	$NumeroMedio = $b;
+}
+elseif($c >= $a && $c <= $b || $c <= $a && $c >= $b)
+{
+	$NumeroMedio = $c;
+}
+echo("A:".$a." B: ".$b." C:".$c."<br>");
+echo("El numero medio es: ".$NumeroMedio."<br>");
+echo("<br>Ejercicio 6<br>");
     // Constructor
     $array = array(rand(1,10),rand(1,10),rand(1,10),rand(1,10),rand(1,10));
     $acumulador = 0;
@@ -82,4 +163,3 @@
 
     //var_dump (m:array);
 
-?>
